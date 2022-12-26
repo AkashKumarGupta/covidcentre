@@ -1,0 +1,7 @@
+covid_custom_module.update_webform_page:
+  path: '/update_covid_centre'
+  methods: [ POST ]
+  defaults:
+    _controller: '\Drupal\covid_custom_module\Controller\UpdateCovidCentre::updateCentre'
+  requirements:
+    _role: 'authenticated'

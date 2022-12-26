@@ -1,0 +1,30 @@
+uuid: d7a2a80b-b5da-46ef-b506-a541a8976a8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.covid_centers
+  module:
+    - system
+    - views
+  theme:
+    - covid_custom_theme
+id: views_block__covid_centers_block_city_covid_centres
+theme: covid_custom_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:covid_centers-block_city_covid_centres'
+settings:
+  id: 'views_block:covid_centers-block_city_covid_centres'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

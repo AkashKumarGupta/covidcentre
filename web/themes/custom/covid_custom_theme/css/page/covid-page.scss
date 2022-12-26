@@ -1,0 +1,41 @@
+.page-node-type-covid-centers {
+  h2.covid-title {
+    color: $red-color;
+    font-size: 35px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 10px;
+  }
+  .fa {
+    color: $light-red-color;
+    font-size: 20px;
+    margin-right: 2px;
+  }
+  .field--name-field-city {
+    display: inline-block;
+  }
+  .field--name-body {
+    color: #a2a2a2;
+    font-size: 14px;
+  }
+  .covid-city, .covid-available-slots, .covid-body {
+    margin-bottom: 10px;
+  }
+  .label {
+    font-size: 14px;
+    color: $dark-grey-color;
+    display: block;
+  }
+  .field--name-field-available-slots {
+    color: #4fbb05;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+.register-block {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #f1f1f1;
+  margin-top: 10px;
+  border-radius: 5px;
+}

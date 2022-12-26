@@ -1,0 +1,8 @@
+covid_custom_library:
+  version: 1.x
+  js:
+    js/covid.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

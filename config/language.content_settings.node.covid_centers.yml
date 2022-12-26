@@ -1,0 +1,11 @@
+uuid: 44150614-5cf0-4ba5-8097-5e8139206efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.covid_centers
+id: node.covid_centers
+target_entity_type_id: node
+target_bundle: covid_centers
+default_langcode: site_default
+language_alterable: false

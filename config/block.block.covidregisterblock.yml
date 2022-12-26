@@ -1,0 +1,28 @@
+uuid: dfdd8762-ea3d-4ea5-bb1c-04a5e238aada
+langcode: en
+status: true
+dependencies:
+  module:
+    - covid_custom_module
+    - node
+  theme:
+    - covid_custom_theme
+id: covidregisterblock
+theme: covid_custom_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: covid_register_block
+settings:
+  id: covid_register_block
+  label: 'Covid Register Block'
+  label_display: '0'
+  provider: covid_custom_module
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      covid_centers: covid_centers

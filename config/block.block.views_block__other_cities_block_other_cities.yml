@@ -1,0 +1,30 @@
+uuid: ffcd83c8-ec73-4164-9075-df803804433a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.other_cities
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap5
+id: views_block__other_cities_block_other_cities
+theme: bootstrap5
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:other_cities-block_other_cities'
+settings:
+  id: 'views_block:other_cities-block_other_cities'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/taxonomy/term/*'

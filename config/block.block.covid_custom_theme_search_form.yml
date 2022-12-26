@@ -1,0 +1,23 @@
+uuid: 30a440d6-f00c-442e-9762-e44616905d16
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - covid_custom_theme
+_core:
+  default_config_hash: HZJ8894mYbX0pdeltUdfnQjONb-BnkflWDqEm_x13m4
+id: covid_custom_theme_search_form
+theme: covid_custom_theme
+region: header
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

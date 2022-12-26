@@ -1,0 +1,7 @@
+<div class="register-block">
+  {% if register_link is not empty %}
+  	<div class="btn btn-red" id="covid-register" covid_nid="{{ covid_nid }}">Register</div>
+  {% elseif register_text is not empty %}
+  	<div class="register-text">{{ register_text|raw }}</div>
+  {% endif %}
+</div>

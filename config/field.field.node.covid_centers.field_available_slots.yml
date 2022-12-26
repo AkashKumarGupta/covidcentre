@@ -1,0 +1,23 @@
+uuid: 544228ca-16de-4c66-9877-9a9a9a8d3651
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available_slots
+    - node.type.covid_centers
+id: node.covid_centers.field_available_slots
+field_name: field_available_slots
+entity_type: node
+bundle: covid_centers
+label: 'Available slots'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

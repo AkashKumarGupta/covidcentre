@@ -1,0 +1,70 @@
+// Colors
+$primary-color: #ee6e4a;
+$light-red-color: #ee6e4a;
+$red-color: #be0404;
+$secondary-color: #eebc0f;
+$grey-color: #e7e7e7;
+$dark-grey-color: #666666;
+$black-title: #262626;
+$blue-color: #0097d9;
+$white-color: #ffffff;
+$dark-blue-color: #027cb0;
+
+$primary-font: 'Montserrat', sans-serif;
+$font-thin: 100; 
+$font-extra-light: 200;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+$font-black: 900;
+
+$body-font-size: 15px;
+$body-color: #262626;
+
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 576px;
+
+@mixin page-title {
+  font-size: 24px !important;
+  color: $black-title;
+  font-weight: $font-semi-bold;
+  margin-top: 30px;
+}
+@mixin more-link {
+  text-decoration: underline;
+  color: $primary-color;
+  font-size: 15px;
+  text-transform:  uppercase;
+  margin-top: 30px;
+  display: block;
+  font-weight: $font-semi-bold;
+}
+@mixin show-more-link {
+  text-decoration: none;
+  color: $primary-color;
+  font-size: 15px;
+  margin-top: 20px;
+  display: block;
+  font-weight: $font-semi-bold;
+}
+@mixin rounded-orange-btn {
+  padding: 10px 30px;
+  background: $secondary-color;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  display: block;
+  border: 0px;
+  outline: 0px;
+  box-shadow: none;
+  margin-top: 30px;
+}
+@mixin fa {
+  font-family: "Font Awesome\ 5 Free";
+  font-style: normal;
+  font-weight: 600;
+}

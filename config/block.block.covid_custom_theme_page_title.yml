@@ -1,0 +1,20 @@
+uuid: d3083b14-434f-4afb-a3fa-7b7eba8c4c5c
+langcode: en
+status: false
+dependencies:
+  theme:
+    - covid_custom_theme
+_core:
+  default_config_hash: qYppfxaWSy6BwGNKdMch1PeUA24PlRTt39jQft6A6Kg
+id: covid_custom_theme_page_title
+theme: covid_custom_theme
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

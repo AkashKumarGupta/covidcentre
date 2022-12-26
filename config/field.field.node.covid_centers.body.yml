@@ -1,0 +1,23 @@
+uuid: 91dc0614-09c3-4204-ae7a-be0f3bc958ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.covid_centers
+  module:
+    - text
+id: node.covid_centers.body
+field_name: body
+entity_type: node
+bundle: covid_centers
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

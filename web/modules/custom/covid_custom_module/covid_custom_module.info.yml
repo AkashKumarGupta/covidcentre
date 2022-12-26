@@ -1,0 +1,7 @@
+name: Covid Custom module
+type: module
+description: Covid Custom module.
+core_version_requirement: ^9.3 || ^10
+package: Custom
+dependencies:
+  - block

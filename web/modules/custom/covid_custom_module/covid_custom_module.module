@@ -1,0 +1,117 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+use Drupal\user\Entity\User;
+use Drupal\node\Entity\Node;
+
+
+function covid_custom_module_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  // Modify contextual filters for other cities view based on country term page
+  $account = \Drupal::currentUser();
+  if ($view->id() == 'other_cities' && $display_id == 'block_other_cities') {
+    $user = User::load($account->id());
+    $country = $user->get('field_country')->getValue();
+    if(!empty($country)) {
+      $args[0] = $country[0]['target_id'];
+    }
+  }
+
+  // Modify contextual filters to pass user city for view
+  if ($view->id() == 'covid_centers' && $display_id == 'block_city_covid_centres') {
+    $user = User::load($account->id());
+    $city = $user->get('field_city')->getValue();
+    if(!empty($city)) {
+      $args[0] = $city[0]['target_id'];
+    }
+  }
+
+  // Modify contextual filters to pass node city based on current covid centre
+  if ($view->id() == 'other_covid_centers' && $display_id == 'block_other_covid_centre') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      $nid = $node->id();
+      $city = $node->get('field_city')->getValue();
+      if(!empty($city))
+        $args[0] = $city[0]['target_id'];
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function covid_custom_module_theme($existing, $type, $theme, $path) {
+  return [
+    'covid_register' => [
+      'variables' => [
+        'register_link' => NULL,
+        'covid_nid'=> NULL,
+        'register_text' => NULL,
+      ],
+    ],
+  ];
+}
+
+function covid_custom_module_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+  $field = $variables['field'];
+  if ($view->storage->id() == 'grp_survey' && $view->current_display == 'completed_survey' && $field->field == 'sid') {
+    $sid = intval(trim($variables['output']));
+    $score = 0;
+    $score_label = 'Beginner';
+    if(!empty($sid)) {
+      $webform_submission = WebformSubmission::load($sid);
+      if(!empty($webform_submission)) {
+        $webform_data = $webform_submission->getData();
+        $score = $webform_data['score'];
+        if($score >= 51)
+          $score_label = 'Leader';
+        else if($score >= 41)
+          $score_label = 'Achiever';
+        else if($score >= 21)
+          $score_label = 'Improver';
+      }
+    }
+    $variables['output'] = $score . ' (' . $score_label . ')';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function covid_custom_module_form_webform_submission_survey_form_add_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $user =  \Drupal::currentUser();
+  $user_email = $user->getEmail();
+  $company_nid = \Drupal::requestStack()->getCurrentRequest()->query->get('company_nid');
+  if(!empty($company_nid)){
+    // check if user has company permission
+    $query = db_select('node_field_data', 'nfd');
+    $orGroup = $query->orConditionGroup()
+      ->condition('nfec.field_email_ceo_value', $user_email)
+      ->condition('nfep1.field_email_person_1_value', $user_email)
+      ->condition('nfep2.field_email_person_2_value', $user_email)
+      ->condition('nfee.field_extra_email_value', $user_email);
+    $query->fields('nfd', ['nid', 'title']);
+    $query->leftJoin('node__field_email_ceo', 'nfec', 'nfec.entity_id = nfd.nid');
+    $query->leftJoin('node__field_email_person_1', 'nfep1', 'nfep1.entity_id = nfd.nid');
+    $query->leftJoin('node__field_email_person_2', 'nfep2', 'nfep2.entity_id = nfd.nid');
+    $query->leftJoin('node__field_extra_email', 'nfee', 'nfee.entity_id = nfd.nid');
+    $query->condition('nfd.type', 'company');
+    $query->condition('nfd.status', '1');
+    $query->condition($orGroup);
+
+    $company_node_list = $query->execute()->fetchAll();
+
+    $company_ids = [];
+    foreach ($company_node_list as $company_entity) {
+      $company_ids[] = $company_entity->nid;
+    }
+
+    // check if company is mapped with this user
+    if(!in_array($company_nid, $company_ids)) {
+      $response = new RedirectResponse($base_path . '/user', 302);
+      $response->send();
+    }
+  }
+
+}

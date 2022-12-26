@@ -1,0 +1,25 @@
+uuid: 48a70fe8-8503-4ab5-bb01-a0d98e3ed44a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - covid_custom_theme
+_core:
+  default_config_hash: nuW1Z5MdvzbCCEZ9RQojaEWB6Zni32zTq-v5OWbS2sc
+id: covid_custom_theme_branding
+theme: covid_custom_theme
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

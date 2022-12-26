@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.page-node-type-covid-centers h2.covid-title {
+  color: #be0404;
+  font-size: 35px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 10px;
+}
+.page-node-type-covid-centers .fa {
+  color: #ee6e4a;
+  font-size: 20px;
+  margin-right: 2px;
+}
+.page-node-type-covid-centers .field--name-field-city {
+  display: inline-block;
+}
+.page-node-type-covid-centers .field--name-body {
+  color: #a2a2a2;
+  font-size: 14px;
+}
+.page-node-type-covid-centers .covid-city, .page-node-type-covid-centers .covid-available-slots, .page-node-type-covid-centers .covid-body {
+  margin-bottom: 10px;
+}
+.page-node-type-covid-centers .label {
+  font-size: 14px;
+  color: #666666;
+  display: block;
+}
+.page-node-type-covid-centers .field--name-field-available-slots {
+  color: #4fbb05;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.register-block {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #f1f1f1;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.page-title {
+  font-size: 24px !important;
+  color: #262626;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.more-link {
+  text-decoration: underline;
+  color: #ee6e4a;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  display: block;
+  font-weight: 600;
+}
+
+.show-more-link {
+  text-decoration: none;
+  color: #ee6e4a;
+  font-size: 15px;
+  margin-top: 20px;
+  display: block;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #0097d9;
+  border-color: #0097d9;
+}
+.btn-primary:hover {
+  background-color: #027cb0;
+  border-color: #027cb0;
+}
+
+.orange-btn {
+  padding: 10px 30px;
+  background: #eebc0f;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  display: block;
+  border: 0px;
+  outline: 0px;
+  box-shadow: none;
+  margin-top: 30px;
+}
+.orange-btn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-bar {
+  background: #fff;
+}
+
+/* Header CSS start */
+.top-bar {
+  padding: 20px 0px;
+}
+
+.region-header {
+  display: flex;
+  justify-content: space-between;
+}
+.region-header .site-logo {
+  margin: 0px;
+  border-right: 1px solid #e2e2e2;
+  margin-right: 15px;
+  padding-right: 15px;
+}
+.region-header .site-title {
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.mobile-menu-toggle {
+  float: right;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  width: 44px;
+  color: #ee6e4a;
+}
+
+.navbar-mobile .navbar-nav {
+  display: block;
+}
+
+.mobile-show {
+  display: none;
+}
+
+.desktop-show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-show {
+    display: block;
+  }
+  .desktop-show {
+    display: none;
+  }
+}
+.logo-container {
+  padding: 40px 150px;
+  display: flex;
+  align-items: center;
+}
+.logo-container .logo-img {
+  padding-right: 15px;
+}
+.logo-container .logo-content {
+  padding-left: 15px;
+  border-left: 1px solid #eee;
+}
+.logo-container .logo-content h3 {
+  text-transform: uppercase;
+  margin: 5px 0px 0px 0px;
+  color: #0091c6;
+  font-size: 18px;
+}
+.logo-container .logo-content p {
+  margin: 5px 0px 5px 0px;
+  color: #0091c6;
+  font-size: 14px;
+}
+
+/* NAVIGATION SCSS STARTS */
+#block-covid-custom-theme-account-menu {
+  margin-top: 10px;
+  color: #0097d9;
+}
+#block-covid-custom-theme-account-menu .navbar-nav {
+  flex-direction: row;
+}
+
+#navbar {
+  background-color: #ee6e4a;
+  color: #fff;
+}
+#navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+#navbar .navbar-nav li a {
+  padding: 15px;
+}
+#navbar .navbar-nav li a:hover, #navbar .navbar-nav li a.is-active {
+  background-color: #be0404;
+}
+
+/* ALL LISTING PAGE */
+.covid-centre-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f1f1f1;
+  margin: 10px 0px;
+  border-radius: 5px;
+  align-items: center;
+}
+.covid-centre-list .list-title a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #0097d9;
+}
+.covid-centre-list .list-city {
+  color: #666666;
+}
+.covid-centre-list .list-city .fa {
+  margin-right: 5px;
+}
+.covid-centre-list .list-body p {
+  margin-bottom: 0px;
+}
+.covid-centre-list .covid-view-link a {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: #0097d9;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+}
+.covid-centre-list .covid-view-link a:hover {
+  background-color: #027cb0;
+}
+
+.views-exposed-form .form-item-search, .views-exposed-form .form-item-search-api-fulltext {
+  width: 100%;
+  margin: 10px 0px;
+  position: relative;
+}
+.views-exposed-form .form-item-search input, .views-exposed-form .form-item-search-api-fulltext input {
+  border: 1px solid #f1f1f1;
+  border-radius: 0px;
+  background: #f1f1f1;
+  height: 40px;
+}
+.views-exposed-form .form-item-search:after, .views-exposed-form .form-item-search-api-fulltext:after {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 600;
+  content: "\f002";
+  color: #666666;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* SIDEBAR - CATEGORY LIST SCSS STARTS */
+#block-views-block-other-cities-block-other-cities-2,
+#block-views-block-other-covid-centers-block-other-covid-centre {
+  margin-top: 10px;
+  border: 1px solid #f1f1f1;
+}
+#block-views-block-other-cities-block-other-cities-2 h2,
+#block-views-block-other-covid-centers-block-other-covid-centre h2 {
+  background: #f1f1f1;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #0097d9;
+}
+
+#block-views-block-other-cities-block-other-cities-2 .view-other-cities, #block-views-block-other-covid-centers-block-other-covid-centre .view-other-covid-centers {
+  padding: 0px;
+}
+#block-views-block-other-cities-block-other-cities-2 .view-other-cities .views-row, #block-views-block-other-covid-centers-block-other-covid-centre .view-other-covid-centers .views-row {
+  padding: 5px 10px;
+}
+#block-views-block-other-cities-block-other-cities-2 .view-other-cities .views-row a, #block-views-block-other-covid-centers-block-other-covid-centre .view-other-covid-centers .views-row a {
+  text-decoration: none;
+  color: #0097d9;
+}
+#block-views-block-other-cities-block-other-cities-2 .view-other-cities .views-row:first-child, #block-views-block-other-covid-centers-block-other-covid-centre .view-other-covid-centers .views-row:first-child {
+  padding-top: 10px;
+}
+#block-views-block-other-cities-block-other-cities-2 .view-other-cities .views-row:last-child, #block-views-block-other-covid-centers-block-other-covid-centre .view-other-covid-centers .views-row:last-child {
+  padding-bottom: 10px;
+}
+
+.region-sidebar-second {
+  padding: 0 0.5rem !important;
+  width: 100%;
+}
+
+.no-result {
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+/*FOOTER CSS STARTED*/
+footer {
+  margin-top: 10px;
+  background-color: #ee6e4a;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding-left: 0rem;
+  margin-left: 0px !important;
+}
+footer ul li {
+  padding: 0.35rem 0px 0.5rem 0px;
+  font-size: 15px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s all;
+}
+footer ul li a:hover {
+  color: #eebc0f;
+}
+footer ul li a.is-active {
+  color: #eebc0f !important;
+}
+footer .social-icon-holder ul {
+  padding-left: 0;
+  width: 100%;
+  display: block;
+}
+footer .social-icon-holder ul li {
+  margin-right: 4%;
+  display: inline-block;
+}
+footer .social-icon-holder ul li a {
+  font-size: 0px;
+}
+footer .social-icon-holder ul li a i {
+  font-size: 18px;
+}
+footer .menu--footer-policy-and-terms {
+  display: flex;
+  flex-direction: row;
+}
+footer .menu--footer-policy-and-terms li {
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+#covid-register {
+  background-color: #be0404;
+  color: #ffffff;
+  width: 100%;
+}
+
+.view-id-covid_centers h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #be0404;
+}
+
+/*# sourceMappingURL=style.css.map */

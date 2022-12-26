@@ -1,0 +1,23 @@
+uuid: 234c0205-ca12-4b30-a0a7-2c47e0905e2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_slots
+    - node.type.covid_centers
+id: node.covid_centers.field_total_slots
+field_name: field_total_slots
+entity_type: node
+bundle: covid_centers
+label: 'Total Slots'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
