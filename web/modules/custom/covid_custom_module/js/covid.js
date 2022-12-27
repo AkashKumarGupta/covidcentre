@@ -15,7 +15,7 @@
                 success: function(data) {
                     console.log(data);
                     if(data.status == 1)
-                        window.location.href = '/user';
+                        window.location.href = drupalSettings.path.baseUrl + 'user';
                     else
                         alert(data.message);
                 }
